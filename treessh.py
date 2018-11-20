@@ -556,8 +556,7 @@ def daemon():
 							time_generated = int(time.time())
 							cur.execute('UPDATE users SET EncryptionKey=?,NewEncryptionKey=?,time_generated=? WHERE identifier=?', ("1",EncryptionKey,time_generated,User))
 							con.commit()
-		except Exception as e:
-			print e
+		except:
 			pass
 
 		try:
